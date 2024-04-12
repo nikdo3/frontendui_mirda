@@ -24,6 +24,11 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
+        path: "/form/:id",
+        element: <FormPage />,
+        errorElement: <SearchPage />,
+    },
+    {
         path: "/group/:id",
         element: <GroupPage />,
         errorElement: <SearchPage />,

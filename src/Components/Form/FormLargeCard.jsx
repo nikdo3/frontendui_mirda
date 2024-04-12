@@ -1,29 +1,29 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { EventRolesCard } from './EventRolesCard'
-import { EventRawCard } from './EventRawCard'
-import { EventMediumCard } from './EventMediumCard'
+import { FormRolesCard } from './FormRolesCard'
+import { FormRawCard } from './FormRawCard'
+import { FormMediumCard } from './FormMediumCard'
 
-export const EventLargeCard = ({user, children}) => {
+export const FormLargeCard = ({user, children}) => {
     return (
         <CardCapsule title={"Uživatel " + user?.fullname}>
         <Row>
             <Col md={3}>
-                <EventMediumCard user={user}/>
+                <FormMediumCard user={user}/>
             </Col>*
             <Col md={6}>
                 {children}
             </Col>
             <Col md={3}>
-                <EventRolesCard user={user}/>
+                <FormRolesCard user={user}/>
             </Col>
             
         </Row>
         <br />
         <Row>
             <Col>
-                <EventRawCard user={user}/>
+                <FormRawCard user={user}/>
             </Col>
         </Row>
     </CardCapsule>

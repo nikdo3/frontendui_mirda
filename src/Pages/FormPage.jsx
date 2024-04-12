@@ -5,7 +5,7 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchEventByIdAsyncAction } from "../Queries"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
-export const EventPage_mira = ()  => {
+export const FormPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
     const [user, userPromise] = useFreshItem({id}, FetchEventByIdAsyncAction)
@@ -13,7 +13,7 @@ export const EventPage_mira = ()  => {
 
     if (Event) {
       return (
-            <EventLargeCard user={user} />
+            <FromLargeCard user={user} />
         )
     } else {
         return (
