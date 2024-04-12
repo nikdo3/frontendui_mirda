@@ -17,7 +17,7 @@ export const FormPage = ()  => {
         )
     } else {
         return (
-            <div>Loading...</div>
+            <div>Loading....</div>
         )
     }
     
