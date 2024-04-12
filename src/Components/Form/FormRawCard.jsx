@@ -5,7 +5,7 @@ import 'react-json-view-lite/dist/index.css';
 
 export const FormRawCard = ({user}) => {
     return (
-        <CardCapsule title="JSON data">
+        <CardCapsule title="JSON data lolS">
             <JsonView data={user} shouldExpandNode={allExpanded} style={defaultStyles} />
         </CardCapsule>
     )
