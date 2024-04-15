@@ -2,6 +2,7 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query ($id: UUID!) {
   result: formById(id: $id) {
+    __typename
     id
     name
     changedby {
@@ -16,6 +17,7 @@ const query = `query ($id: UUID!) {
     }
     nameEn
     rbacobject {
+      __typename
       id
       roles {
         valid
@@ -46,4 +48,4 @@ const query = `query ($id: UUID!) {
   }
 }`
 
-export const FetchUserByIdAsyncAction = CreateAsyncActionFromQuery(query)
+export const FetchFormByIdAsyncAction = CreateAsyncActionFromQuery(query)

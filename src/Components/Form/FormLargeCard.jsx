@@ -5,25 +5,25 @@ import { FormRolesCard } from './FormRolesCard'
 import { FormRawCard } from './FormRawCard'
 import { FormMediumCard } from './FormMediumCard'
 
-export const FormLargeCard = ({user, children}) => {
+export const FormLargeCard = ({form, children}) => {
     return (
-        <CardCapsule title={"Uživatel " + user?.fullname}>
-        <Row>
+        <CardCapsule title={"Fromular " + form?.id}>
+        {/* <Row>
             <Col md={3}>
-                <FormMediumCard user={user}/>
+                <FormMediumCard form={form}/>
             </Col>*
             <Col md={6}>
                 {children}
             </Col>
             <Col md={3}>
-                <FormRolesCard user={user}/>
+                <FormRolesCard form={form}/>
             </Col>
             
         </Row>
-        <br />
+        <br /> */}
         <Row>
             <Col>
-                <FormRawCard user={user}/>
+                <FormRawCard form={form}/>
             </Col>
         </Row>
     </CardCapsule>

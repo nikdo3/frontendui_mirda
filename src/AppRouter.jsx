@@ -5,6 +5,7 @@ import {
 import { GroupPage, UserPage } from "./Pages";
 import { SearchPage } from "./Pages/SearchPage";
 import { EventPage_mira } from "./Pages/EventPage_mira";
+import { FormPage } from "./Pages/FormPage";
 // import { UserPage, GroupPage } from "./Pages";
 
 export const Routes = [
@@ -24,13 +25,13 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-        path: "/form/:id",
-        element: <FormPage />,
+        path: "/group/:id",
+        element: <GroupPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/group/:id",
-        element: <GroupPage />,
+        path: "/form/:id",
+        element: <FormPage />,
         errorElement: <SearchPage />,
     },
     {
