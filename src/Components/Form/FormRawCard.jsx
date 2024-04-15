@@ -3,10 +3,10 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import { JsonView, allExpanded, defaultStyles } from 'react-json-view-lite';
 import 'react-json-view-lite/dist/index.css';
 
-export const FormRawCard = ({user}) => {
+export const FormRawCard = ({form}) => {
     return (
-        <CardCapsule title="JSON data lolS">
-            <JsonView data={user} shouldExpandNode={allExpanded} style={defaultStyles} />
+        <CardCapsule title="JSON data">
+            <JsonView data={form} shouldExpandNode={allExpanded} style={defaultStyles} />
         </CardCapsule>
     )
 }
