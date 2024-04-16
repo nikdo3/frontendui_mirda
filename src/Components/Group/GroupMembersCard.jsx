@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
-import { UserLink } from '../Form/FormLink'
+//import { UserLink } from '../User/UserLink'
 
 
 const UserShort = ({user}) => {
