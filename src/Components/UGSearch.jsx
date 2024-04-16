@@ -4,7 +4,7 @@ import { useState } from "react"
 import { FetchSearchAsyncAction } from "../Queries/FetchSearchAsyncAction"
 import { Col, Row } from "react-bootstrap"
 import { useSelector } from "react-redux"
-import { UserLink } from "./User/UserLink"
+import { UserLink } from "./Form/FormLink"
 import { GroupLink } from "./Group"
 
 const ShowUser = ({user}) => {

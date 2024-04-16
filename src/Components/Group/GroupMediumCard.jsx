@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import { GroupLink } from './GroupLink'
-import { UserLink } from '../User/UserLink'
+import { UserLink } from '../Form/FormLink'
 
 
 const Roles = ({roles, valid=true}) => {
