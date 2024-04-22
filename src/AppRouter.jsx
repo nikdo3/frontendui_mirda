@@ -30,7 +30,7 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-        path: "/form/:id",
+        path: "/form/view/:id",
         element: <FormPage />,
         errorElement: <SearchPage />,
     },
@@ -46,7 +46,7 @@ export const Routes = [
     },    
 ]
 
-const router = createBrowserRouter(Routes, {basename: "/ug"});
+const router = createBrowserRouter(Routes, {basename: "/forms"});
 // const router = createBrowserRouter(Routes);
 
 export const AppRouter = () => <RouterProvider router={router} />
