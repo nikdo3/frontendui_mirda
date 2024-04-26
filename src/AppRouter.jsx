@@ -2,7 +2,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { GroupPage, UserPage } from "./Pages";
+import { FormPage, GroupPage, UserPage } from "./Pages";
 import { SearchPage } from "./Pages/SearchPage";
 // import { UserPage, GroupPage } from "./Pages";
 
@@ -19,7 +19,7 @@ export const Routes = [
     },
     {
         path: "/form/view/:id",
-        element: <UserPage />,
+        element: <FormPage />,
         errorElement: <SearchPage />,
     },
     {
