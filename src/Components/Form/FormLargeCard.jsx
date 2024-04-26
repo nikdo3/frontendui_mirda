@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 // import { FormRolesCard } from './FormRolesCard'
 import { FormRawCard } from './FormRawCard'
+import { FormCard } from './FormCard'
 // import { FormMediumCard } from './FormMediumCard'
 
 export const FormLargeCard = ({form, children}) => {
