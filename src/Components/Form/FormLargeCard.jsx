@@ -7,7 +7,7 @@ import { FormRawCard } from './FormRawCard'
 
 export const FormLargeCard = ({form, children}) => {
     return (
-        <CardCapsule title={"Fromulář " + form?.id}>
+        <CardCapsule title={"Fromulář "}>
         {/* <Row>
             <Col md={3}>
                 <FormMediumCard form={form}/>

@@ -4,7 +4,7 @@ import { FormLargeCard } from "../Components"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchFormByIdAsyncAction } from "../Queries"
 
-const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
+const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst Formulář", success: "Načtení formuláře se povedlo"})
 export const FormPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
