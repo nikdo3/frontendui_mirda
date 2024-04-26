@@ -9,18 +9,24 @@ export const FormCard = ({form}) => {
         <CardCapsule title="form">
             
             <Row>
-                <Col>Jméno</Col>
+                <Col>Jméno formuáře:</Col>
                 <Col>{form.name}</Col>
             </Row>
             <Row>
-                <Col>Příjmení</Col>
-                <Col>{form.surname}</Col>
+                <Col>Status</Col>
+                <Col>{form.status}</Col>
             </Row>
             <Row>
-                <Col>
-                    <button className='btn btn-success'>click</button>
-                </Col>
-                <Col></Col>
+                <Col>Části</Col>
+                <Col>{form.sections.name}</Col>
+            </Row>
+            <Row>
+                <Col>Jméno Části</Col>
+                <Col>{form.sections.parts.name}</Col>
+            </Row>
+            <Row>
+                <Col>Naposledy změněno</Col>
+                <Col>{form.lastchange}</Col>
             </Row>
         </CardCapsule>
         </div>
