@@ -5,7 +5,7 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchFormByIdAsyncAction } from "../Queries"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
-export const FormPage = ()  => {
+export const FormPageRequest = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
     const [form, formPromise] = useFreshItem({id}, FetchFormByIdAsyncAction)
