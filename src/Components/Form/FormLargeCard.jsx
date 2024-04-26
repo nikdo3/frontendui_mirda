@@ -23,13 +23,13 @@ export const FormLargeCard = ({form, children}) => {
         </Row>
         <br /> */}
         <Row>
-            <Col>
+            <Col md = {3}>
                 <FormCard form={form}/>
             </Col>
         </Row>
         <br />
         <Row>
-            <Col>
+            <Col md = {3}>
                 <FormRawCard form={form}/>
             </Col>
         </Row>

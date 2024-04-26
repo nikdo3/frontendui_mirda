@@ -11,35 +11,19 @@ const query = `query ($id: UUID!) {
     }
     lastchange
     created
-    createdby {
-      id
-      name
-    }
     nameEn
-    rbacobject {
-      __typename
-      id
-      roles {
-        valid
-        group {
-          id
-          name
-        }
-        roletype {
-          id
-          name
-        }
-      }
-    }
     valid
     status
     sections {
       id
       name
-    }
-    creator {
-      id
-      name
+      parts {
+        name
+        items {
+          value
+          name
+        }
+      }
     }
     type {
       id
