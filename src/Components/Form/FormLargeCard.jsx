@@ -23,13 +23,24 @@ export const FormLargeCard = ({form, children}) => {
         </Row>
         <br /> */}
         <Row>
-            <Col md = {3}>
+           <Col md = {3}> {/* basic info */}
                 <FormCard form={form}/>
             </Col>
+
+            <Col md = {3}>{/* section */}
+                
+            </Col>
+
+            <Col md = {3}>{/* part */}
+                
+            </Col>
+
+            <Col md = {3}>{/* item */}
+                
+            </Col>
         </Row>
-        <br />
         <Row>
-            <Col md = {3}>
+            <Col>{/* raw */}
                 <FormRawCard form={form}/>
             </Col>
         </Row>
