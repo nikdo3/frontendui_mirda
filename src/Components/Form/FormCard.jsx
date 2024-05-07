@@ -22,7 +22,7 @@ export const FormCard = ({form}) => {
             </Row>
             <Row>
                 <Col>Jméno Části</Col>
-                <Col>{form.sections.parts.name}</Col>
+                <Col>{form.sections.parts}</Col>
             </Row>
             <Row>
                 <Col>Naposledy změněno</Col>
