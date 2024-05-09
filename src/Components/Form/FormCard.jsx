@@ -10,23 +10,23 @@ export const FormCard = ({form}) => {
             
             <Row>
                 <Col>Jméno formuáře:</Col>
-                <Col>{form.name}</Col>
+                <Col>{form?.name}</Col>
             </Row>
             <Row>
-                <Col>Status</Col>
-                <Col>{form.status}</Col>
+                <Col>Poslední změna:</Col>
+                <Col>{form?.lastchange}</Col>
             </Row>
             <Row>
-                <Col>Části</Col>
-                <Col>{form.sections.name}</Col>
+                <Col>Sekce:</Col>
+                <Col>{form?.sections?.name}</Col>
             </Row>
             <Row>
-                <Col>Jméno Části</Col>
-                <Col>{form.sections.parts}</Col>
+                <Col>Jméno části:</Col>
+                <Col>{form?.sections?.parts?.name}</Col>
             </Row>
             <Row>
-                <Col>Naposledy změněno</Col>
-                <Col>{form.lastchange}</Col>
+                <Col>Typ:</Col>
+                <Col>{form?.type?.name}</Col>
             </Row>
         </CardCapsule>
         </div>
