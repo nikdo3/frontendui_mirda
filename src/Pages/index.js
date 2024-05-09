@@ -5,5 +5,4 @@ export * from './FormRequestPage'
 export * from './SearchPage'
 export * from './FormPageEdit'
 export * from './FormRequestPage'
-export * from './RequestLargeCard'
 

@@ -2,8 +2,8 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 // import { RequestRolesCard } from './RequestRolesCard'
-import { RequestRawCard } from './RequestRawCard'
-import { RequestCard } from './RequestCard'
+// import { RequestRawCard } from './RequestRawCard'
+// import { RequestCard } from './RequestCard'
 // import { RequestMediumCard } from './RequestMediumCard'
 
 export const RequestLargeCard = ({request, children}) => {
@@ -24,7 +24,7 @@ export const RequestLargeCard = ({request, children}) => {
         <br /> */}
         <Row>
            <Col md = {3}> {/* basic info */}
-                <RequestCard request={request}/>
+                {/* <RequestCard request={request}/> */}
             </Col>
 
             <Col md = {3}>{/* section */}
@@ -41,7 +41,7 @@ export const RequestLargeCard = ({request, children}) => {
         </Row>
         <Row>
             <Col>{/* raw */}
-                <RequestRawCard request={request}/>
+                {/* <RequestRawCard request={request}/> */}
             </Col>
         </Row>
     </CardCapsule>

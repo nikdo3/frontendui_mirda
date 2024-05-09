@@ -28,14 +28,19 @@ export const FormLargeCard = ({form, children}) => {
             </Col>
 
             <Col md = {3}>{/* section */}
-                
+                <p>tady bude section</p>
+                {/* <FormSectionCard form={form}/> */}
             </Col>
 
             <Col md = {3}>{/* part */}
+                <p>tady bude part</p>
+                {/* <FormPartCard form={form}/> */}
                 
             </Col>
 
             <Col md = {3}>{/* item */}
+                <p>tady bude item</p>
+                {/* <FormItemCard form={form}/> */}
                 
             </Col>
         </Row>
