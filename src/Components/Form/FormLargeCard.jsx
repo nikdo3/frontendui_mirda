@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col'
 // import { FormRolesCard } from './FormRolesCard'
 import { FormRawCard } from './FormRawCard'
 import { FormCard } from './FormCard'
+import { FormSections } from './FormSections'
 // import { FormMediumCard } from './FormMediumCard'
 
 export const FormLargeCard = ({form, children}) => {
@@ -27,18 +28,17 @@ export const FormLargeCard = ({form, children}) => {
                 <FormCard form={form}/>
             </Col>
 
-            <Col md = {3}>{/* section */}
-                <p>tady bude section</p>
-                {/* <FormSectionCard form={form}/> */}
+            <Col md = {4}>{/* section */}
+                <FormSections form={form}/>
             </Col>
 
-            <Col md = {3}>{/* part */}
+            <Col md = {2}>{/* part */}
                 <p>tady bude part</p>
                 {/* <FormPartCard form={form}/> */}
                 
             </Col>
 
-            <Col md = {3}>{/* item */}
+            <Col md = {2}>{/* item */}
                 <p>tady bude item</p>
                 {/* <FormItemCard form={form}/> */}
                 
