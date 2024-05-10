@@ -8,7 +8,7 @@ import { RawUpdateFormAsyncAction} from '../../Queries/UpdateFormAsyncAction'
 
 export const FormEdit = ({form}) => {
     return (
-        <CardCapsule title={"Fromulář " + form?.name + " - atributy"}>
+        <CardCapsule title={"Formulář " + form?.name + " - atributy"}>
             <Row>
                 <Col>
                     <EditableAttributeText item={form} attributeName="name" label="Název" asyncUpdater={RawUpdateFormAsyncAction} />

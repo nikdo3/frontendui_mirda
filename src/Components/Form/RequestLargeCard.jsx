@@ -28,16 +28,12 @@ export const RequestLargeCard = ({request}) => {
                 <p>tady bude basic info</p>
             </Col>
                 
-            <Col md = {3}>{/* section */}
-                <p>tady bude section</p>
+            <Col md = {3}>{/* histories */}
+                <p>tady bude histories</p>
             </Col>
 
-            <Col md = {3}>{/* part */}
-                <p>tady bude part</p>
-            </Col>
-
-            <Col md = {3}>{/* item */}
-                <p>tady bude item</p>
+            <Col md = {3}>{/* form */}
+                <p>tady bude form</p>
             </Col>
         </Row>
         <Row>

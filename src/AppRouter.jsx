@@ -28,7 +28,7 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-        path: "/form/edit/:form_id",
+        path: "/form/edit/:id",
         element: <FormPageEdit />,
         errorElement: <SearchPage />,
     },
