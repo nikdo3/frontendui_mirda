@@ -6,7 +6,8 @@ import { RawUpdateFormAsyncAction} from '../../Queries/UpdateFormAsyncAction'
 // import { FormEditType } from './FormEditType'
 
 
-export const FormEdit = ({form}) => {
+export const 
+FormEdit = ({form}) => {
     return (
         <CardCapsule title={"Formulář " + form?.name + " - atributy"}>
             <Row>
@@ -16,17 +17,7 @@ export const FormEdit = ({form}) => {
             </Row>
             {/* <Row>
                 <Col>
-                    <FormEditType form={form} />   
-                </Col>      
-            </Row> */}
-            {/* <Row>
-                <Col>
-                    <EditableAttributeText item={form} attributeName="name" label="název" asyncUpdater={RawUpdateFormAsyncAction} type="String" />
-                </Col>      
-            </Row> */}
-            {/* <Row>
-                <Col>
-                    <EditableAttributeText item={form} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateFormAsyncAction} type="datetime-local" />
+                    <FormSectionsEdit form={form} />   
                 </Col>      
             </Row> */}
             

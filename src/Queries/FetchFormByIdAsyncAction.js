@@ -22,7 +22,9 @@ const query = `query ($id: UUID!) {
         items {
           value
           name
+          id
         }
+        id
       }
     }
     type {
