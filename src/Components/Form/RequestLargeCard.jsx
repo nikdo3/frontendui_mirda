@@ -6,7 +6,7 @@ import { RequestRawCard } from './RequestRawCard'
 // import { RequestCard } from './RequestCard'
 // import { RequestMediumCard } from './RequestMediumCard'
 
-export const RequestLargeCard = ({request}) => {
+export const RequestLargeCard = ({request,children}) => {
     return (
         <CardCapsule title={"Žádost "}>
         {/* <Row>
