@@ -23,6 +23,10 @@ const query = `query ($id: UUID!) {
           value
           name
           id
+          type {
+            name
+            id
+          }
         }
         id
       }

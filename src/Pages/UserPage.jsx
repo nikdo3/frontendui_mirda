@@ -20,5 +20,4 @@ export const UserPage = ()  => {
             <div>Loading...</div>
         )
     }
-    
 }
