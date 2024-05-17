@@ -1,7 +1,8 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
-const query = `query MyQuery($id: UUID!) {
-  requestById(id: $id) {
+const query = `query ($id: UUID!) {
+  result: requestById(id: $id) {
+    __typename
     created
     id
     name
