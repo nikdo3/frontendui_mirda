@@ -11,11 +11,15 @@ export const FormItems = ({part}) => {
                 <Row key={item.id} >
                     
                     {item.type?.name === 'student' ? (
-                        <FormUserCard value={item.value} />
+                        <CardCapsule title="Identifikace" >
+                            <FormUserCard value={item.value} />
+                        </CardCapsule>
                     ) : (
                         <>
-                            <Col>{item.name}:</Col>
-                            <Col>{item.value}</Col>
+                            <CardCapsule title={item.name} >
+                                <Col>{item.name}:</Col>
+                                <Col>{item.value}</Col>
+                            </CardCapsule>
                         </>
                     )}
                 </Row>

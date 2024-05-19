@@ -7,10 +7,12 @@ import { FormItems } from './FormItems'
 export const FormParts = ({section}) => {
     const parts = section?.parts || []
     return (
-        <Row>
-            {parts.map((part) => (
-                    <FormItems key={part.id} part={part}/>
-            ))}
-        </Row>
+        <CardCapsule title={section.name}>
+            <Row>
+                {parts.map((part) => (
+                        <FormItems key={part.id} part={part}/>
+                ))}
+            </Row>
+        </CardCapsule>
     )
 }

@@ -11,7 +11,7 @@ export const FormSections = ({form}) => {
         <CardCapsule title={"Formulář " + form?.name} >
             {sections.map((section, index) => (
                 <Row>
-                    <Col key={section.id} md={6}>
+                    <Col key={section.id} md={12}>
                         <CardCapsule title={section.name}>
                             <FormParts section={section} />
                         </CardCapsule>
