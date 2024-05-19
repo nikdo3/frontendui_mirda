@@ -15,12 +15,12 @@ export const FormItems = ({part}) => {
                             <FormUserCard value={item.value} />
                         </CardCapsule>
                     ) : (
-                        <>
-                            <CardCapsule title={item.name} >
+                        <CardCapsule title={item.name} >
+                            <Row>
                                 <Col>{item.name}:</Col>
                                 <Col>{item.value}</Col>
-                            </CardCapsule>
-                        </>
+                            </Row>
+                        </CardCapsule>
                     )}
                 </Row>
             ))}
