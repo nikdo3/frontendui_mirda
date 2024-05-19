@@ -9,7 +9,7 @@ import { FormSections } from './FormSections'
 
 export const FormLargeCard = ({form, children}) => {
     return (
-        <CardCapsule title={"Formulář "}>
+        <CardCapsule title={"Formulář " + form?.name}>
         {/* <Row>
             <Col md={3}>
                 <FormMediumCard form={form}/>
