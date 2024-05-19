@@ -10,7 +10,7 @@ const query = `query($phrase: String!) {
       email
     }
     
-    resultg: groupPage(where: {name: {_ilike: $phrase}}) {
+    result: groupPage(where: {name: {_ilike: $phrase}}) {
       __typename
       id
       name
