@@ -10,7 +10,7 @@ export const FormSections = ({form}) => {
     return (
         <Row>
             {sections.map((section, index) => (
-                <Col key={section.id} xs={12} sm={6} md={4} lg={3}>
+                <Col key={section.id} md={6}>
                     <CardCapsule title={section.name}>
                         <FormParts section={section} />
                     </CardCapsule>
