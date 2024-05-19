@@ -9,16 +9,15 @@ export const FormSections = ({form}) => {
     const sections = form?.sections || []
     return (
         <CardCapsule title={"Formulář " + form?.name} >
-            <Row>
-                {sections.map((section, index) => (
+            {sections.map((section, index) => (
+                <Row>
                     <Col key={section.id} md={6}>
                         <CardCapsule title={section.name}>
                             <FormParts section={section} />
                         </CardCapsule>
                     </Col>
-                ))}
-
-            </Row>
+                </Row>
+            ))}
         </CardCapsule>
     )
 }
