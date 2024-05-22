@@ -6,27 +6,23 @@ import Col from 'react-bootstrap/Col'
 export const RequestCard = ({request}) => {
     return (
         <div>
-        <CardCapsule title="request">
+        <CardCapsule title="Žádost">
             
             <Row>
                 <Col>Jméno requestuáře:</Col>
-                <Col>{request.name}</Col>
+                <Col>{request?.name}</Col>
             </Row>
             <Row>
-                <Col>Status</Col>
-                <Col>{request.status}</Col>
+                <Col>Name of requestory</Col>
+                <Col>{request?.nameEn}</Col>
             </Row>
             <Row>
-                <Col>Části</Col>
-                <Col>{request.sections.name}</Col>
-            </Row>
-            <Row>
-                <Col>Jméno Části</Col>
-                <Col>{request.sections.parts}</Col>
+                <Col>Vytvořeno</Col>
+                <Col>{request?.created}</Col>
             </Row>
             <Row>
                 <Col>Naposledy změněno</Col>
-                <Col>{request.lastchange}</Col>
+                <Col>{request?.lastchange}</Col>
             </Row>
         </CardCapsule>
         </div>

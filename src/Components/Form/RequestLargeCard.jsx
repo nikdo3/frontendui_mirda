@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 // import { RequestRolesCard } from './RequestRolesCard'
 import { RequestRawCard } from './RequestRawCard'
+import { RequestCard } from './RequestCard'
 // import { RequestCard } from './RequestCard'
 // import { RequestMediumCard } from './RequestMediumCard'
 
@@ -25,7 +26,10 @@ export const RequestLargeCard = ({request,children}) => {
         <Row>
            <Col md = {3}> {/* basic info */}
                 {/* <RequestCard request={request}/> */}
-                <p>tady bude basic info</p>
+                <RequestCard request={request}/>
+            </Col>
+            <Col md = {3}>
+                {children}
             </Col>
                 
             <Col md = {3}>{/* histories */}
@@ -36,9 +40,12 @@ export const RequestLargeCard = ({request,children}) => {
                 <p>tady bude form</p>
             </Col>
         </Row>
+        <br />
         <Row>
             <Col>{/* raw */}
-                <RequestRawCard request={request}/>
+
+                {JSON.stringify(request)}
+                
             </Col>
         </Row>
     </CardCapsule>
