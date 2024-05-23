@@ -6,6 +6,8 @@ import { RequestRawCard } from './RequestRawCard'
 import { RequestCard } from './RequestCard'
 // import { RequestCard } from './RequestCard'
 // import { RequestMediumCard } from './RequestMediumCard'
+import { RequestHistoriesCard } from './RequestHistoriesCard'
+import { RequestFormCard } from './RequestFormCard'
 
 export const RequestLargeCard = ({request,children}) => {
     return (
@@ -28,16 +30,16 @@ export const RequestLargeCard = ({request,children}) => {
                 {/* <RequestCard request={request}/> */}
                 <RequestCard request={request}/>
             </Col>
-            <Col md = {3}>
-                {children}
-            </Col>
+           
                 
             <Col md = {3}>{/* histories */}
-                <p>tady bude histories</p>
+                <span>Historie</span>
+                <RequestHistoriesCard request={request} menu={true}></RequestHistoriesCard>
             </Col>
 
             <Col md = {3}>{/* form */}
-                <p>tady bude form</p>
+                <span>Formulář</span>
+                <RequestFormCard request={request} menu={true}></RequestFormCard>
             </Col>
         </Row>
         <br />
