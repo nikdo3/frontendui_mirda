@@ -17,9 +17,9 @@ export const RequestHistoriesCard = ({ request,children,menu=true }) => { // esl
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Všechny</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Pouze změny</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Pouze komentáře</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">a</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">b</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">c</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Col>
@@ -27,7 +27,7 @@ export const RequestHistoriesCard = ({ request,children,menu=true }) => { // esl
         <Row>
           <Col>Historie</Col>
           <Col>
-            <p>tady bude histories</p>
+            <p>obsah</p>
           </Col>
         </Row>
       </CardCapsule>

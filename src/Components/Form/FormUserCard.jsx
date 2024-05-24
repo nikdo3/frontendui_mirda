@@ -7,7 +7,7 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
 export const FormUserCard = ({value}) => {
-    const {id} = "190d578c-afb1-11ed-9bd8-0242ac110002"
+    const id = "2d9dc5ca-a4a2-11ed-b9df-0242ac120003"
     const [onResolve, onReject] = validator(useDispatch())
     const [user, userPromise] = useFreshItem({id}, FetchUserByIdAsyncAction)
     userPromise.then(onResolve, onReject)

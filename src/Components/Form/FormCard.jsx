@@ -16,7 +16,7 @@ export const FormCard = ({form,children}) => {
             
             <Row>
                 <Col>Patří k požadavku:</Col>
-                <ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení</ProxyLink>
+                <ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení studia</ProxyLink>
             </Row>
             <Row>
                 <Col>Poslední změna:</Col>
