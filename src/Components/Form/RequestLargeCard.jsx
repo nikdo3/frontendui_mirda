@@ -11,7 +11,7 @@ import { RequestFormCard } from './RequestFormCard'
 
 export const RequestLargeCard = ({request,children}) => {
     return (
-        <CardCapsule title={"Žádost "}>
+        <CardCapsule title={"Žádost  "}>
         {/* <Row>
             <Col md={3}>
                 <RequestMediumCard request={request}/>
