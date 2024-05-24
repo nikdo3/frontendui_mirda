@@ -39,7 +39,7 @@ export const RequestLargeCard = ({request,children}) => {
 
             <Col md = {3}>{/* form */}
                 <span>Formulář</span>
-                <RequestFormCard request={request} menu={true}></RequestFormCard>
+                <RequestFormCard request={request}></RequestFormCard>
             </Col>
         </Row>
         <br />

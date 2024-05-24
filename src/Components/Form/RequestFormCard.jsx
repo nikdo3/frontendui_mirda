@@ -2,35 +2,23 @@ import { Dropdown } from "react-bootstrap";
 import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { FormParts } from "./FormParts";
 
 
-export const RequestFormCard = ({ form,children,menu=true }) => { // eslint-disable-line react/prop-types
+
+export const RequestFormCard = ({ form,children}) => {
+    const sections = form?.sections || [] 
   return (
-    <div>
-      <CardCapsule title="Formulář">
-        <Row>
-          <Col>Formulář</Col>
-          <Col>
-            <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
-                {menu ? "Vyberte" : "Zobrazit"}
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">a</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">b</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">c</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Col>
-        </Row>
-        <Row>
-          <Col>Formulář</Col>
-          <Col>
-            <p>obsah</p>
-          </Col>
-        </Row>
-      </CardCapsule>
-    </div>
-  );
+    <CardCapsule title={"Formulář " + form?.name}>
+        {sections.map((section, index) => (
+            <Row>
+                <Col key={section.id} md={12}>
+                    <FormParts section={section}/>
+                </Col>
+            </Row>
+        ))}
+    
+    </CardCapsule>
+)
 }
+
