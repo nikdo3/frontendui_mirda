@@ -2,15 +2,21 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
 
-export const FormCard = ({form}) => {
+
+export const FormCard = ({form,children}) => {
     return (
         <div>
-        <CardCapsule title="form">
+        <CardCapsule title={<div>
+            <span>Formulář </span>
+            <span><ProxyLink to={"/form/view/190d578c-afb1-11ed-9bd8-0242ac110002"}>Žádost</ProxyLink></span>
+
+        </div>}>
             
             <Row>
-                <Col>Jméno formuáře:</Col>
-                <Col>{form?.name}</Col>
+                <Col>Patří k požadavku:</Col>
+                <ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení studia</ProxyLink>
             </Row>
             <Row>
                 <Col>Poslední změna:</Col>
