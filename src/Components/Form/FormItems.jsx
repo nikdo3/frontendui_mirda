@@ -12,7 +12,7 @@ export const FormItems = ({part}) => {
                     
                     {item.type?.name === 'student' ? (
                         <CardCapsule title="Identifikace" >
-                            <FormUserCard value={item.value} />
+                            <FormUserCard value={/*item.value*/ "2d9dc5ca-a4a2-11ed-b9df-0242ac120003"} />
                         </CardCapsule>
                     ) : (
                         <CardCapsule title={item.name} >
