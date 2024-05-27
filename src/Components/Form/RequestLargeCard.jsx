@@ -31,11 +31,7 @@ export const RequestLargeCard = ({request,children}) => {
            <Col md = {3}> {/* basic info */}
                 {/* <RequestCard request={request}/> */}
                 <RequestCard request={request}/>
-            </Col>
-           
-                
-            <Col md = {3}>{/* histories */}
-                <span>Historie</span>
+        
                 <RequestHistoriesCard request={request} menu={true}></RequestHistoriesCard>
             </Col>
 
