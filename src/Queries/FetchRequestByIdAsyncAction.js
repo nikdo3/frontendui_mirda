@@ -4,9 +4,7 @@ const query = `query ($id: UUID!) {
   result: requestById(id: $id) {
     __typename
     created
-    
     nameEn
-    
     id
     name
     lastchange
@@ -14,6 +12,9 @@ const query = `query ($id: UUID!) {
       created
       id
       lastchange
+      form {
+        id
+      }
     }
   }
 }`

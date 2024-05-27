@@ -1,24 +1,22 @@
 import { Dropdown } from "react-bootstrap";
-import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { FormParts } from "./FormParts";
+import { FormSections } from "./FormSections";
+import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src";
+import { FetchFormByIdAsyncAction } from "../../Queries";
 
-
-
-export const RequestFormCard = ({ form,children}) => {
-    const sections = form?.sections || [] 
-  return (
-    <CardCapsule title={"Formulář " + form?.name}>
-        {sections.map((section, index) => (
-            <Row>
-                <Col key={section.id} md={12}>
-                    <FormParts section={section}/>
-                </Col>
-            </Row>
-        ))}
-    
-    </CardCapsule>
-)
+const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst Formulář", success: "Načtení formuláře se povedlo"})
+export const RequestFormCard = ({ Forid }) => {
+    const Formid = Forid
+    const [onResolve, onReject] = validator(useDispatch())
+    const [form, formPromise] = useFreshItem(Formid, FetchFormByIdAsyncAction)
+    formPromise.then(onResolve, onReject)
+    if (form) {
+        return (
+            <FormSections form={form} />
+        )
+    } else {
+        return (
+            <div>Loading...</div>
+        )
+    }
 }
 

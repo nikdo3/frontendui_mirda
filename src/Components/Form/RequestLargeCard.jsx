@@ -9,7 +9,9 @@ import { RequestCard } from './RequestCard'
 import { RequestHistoriesCard } from './RequestHistoriesCard'
 import { RequestFormCard } from './RequestFormCard'
 
+
 export const RequestLargeCard = ({request,children}) => {
+    const sortedHistories = [...request.histories].sort((a,b) => new Date(b.created) - new Date(a.created));
     return (
         <CardCapsule title={"Žádost  "}>
         {/* <Row>
@@ -39,14 +41,14 @@ export const RequestLargeCard = ({request,children}) => {
 
             <Col md = {3}>{/* form */}
                 <span>Formulář</span>
-                <RequestFormCard request={request}></RequestFormCard>
+                <RequestFormCard Forid={history[history.length].form.id}></RequestFormCard>
             </Col>
         </Row>
         <br />
         <Row>
             <Col>{/* raw */}
 
-                {JSON.stringify(request)}
+                <RequestRawCard request={request}/>
                 
             </Col>
         </Row>
