@@ -21,7 +21,7 @@ export const RequestHistoriesCard = ({ request,children, table}) => { // eslint-
                 <td><ProxyLink to={"/form/view/" + requesty.form?.id}>{index + 1}</ProxyLink></td>
                 <td>{requesty.created}</td>
                 <td>{requesty.changedby?.fullname}</td>
-                <td>{}</td>
+                <td>{requesty.name}</td>
               </tr>
             ))}
           </tbody>

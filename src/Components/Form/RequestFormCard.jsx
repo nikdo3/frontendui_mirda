@@ -7,8 +7,9 @@ const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst Formu
 export const RequestFormCard = ({ Forid }) => {
     const Formid = Forid
     const [onResolve, onReject] = validator(useDispatch())
-    const [form, formPromise] = useFreshItem(Formid, FetchFormByIdAsyncAction)
+    const [form, formPromise] = useFreshItem({Formid}, FetchFormByIdAsyncAction)
     formPromise.then(onResolve, onReject)
+    
     if (form) {
         return (
             <FormSections form={form} />
