@@ -5,6 +5,16 @@ import Col from 'react-bootstrap/Col'
 import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
 
 
+/**
+ * Renders a form card component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.form - The form object.
+ * @param {string} props.uuid - The UUID of the form.
+ * @param {ReactNode} props.children - The child components.
+ * @returns {JSX.Element} The form card component.
+ */
 export const FormCard = ({form, uuid, children}) => {
     return (
         <div>

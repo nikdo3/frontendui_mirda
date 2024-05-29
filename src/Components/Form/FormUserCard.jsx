@@ -6,6 +6,14 @@ import { FetchUserByIdAsyncAction } from "../../Queries"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
+/**
+ * Renders a user card form component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.value - The value prop.
+ * @returns {JSX.Element} The rendered user card form component.
+ */
 export const FormUserCard = ({value}) => {
     const id = "2d9dc5ca-a4a2-11ed-b9df-0242ac120003"
     const [onResolve, onReject] = validator(useDispatch())

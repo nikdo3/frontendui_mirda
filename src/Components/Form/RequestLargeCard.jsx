@@ -35,9 +35,7 @@ export const RequestLargeCard = ({request,children}) => {
                 <RequestHistoriesCard request={request} menu={true}></RequestHistoriesCard>
             </Col>
 
-            <Col md = {3}>{/* form */}
-                <span>Formulář</span>
-                <p>{sortedHistories[sortedHistories.length - 1].form?.id}</p>
+            <Col md = {8}>{/* form */}
                 <RequestFormCard Forid={sortedHistories[sortedHistories.length - 1].form?.id}></RequestFormCard>
             </Col>
         </Row>

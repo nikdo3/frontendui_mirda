@@ -12,6 +12,7 @@ const query = `query ($id: UUID!) {
       created
       id
       lastchange
+      name
       form {
         id
       }

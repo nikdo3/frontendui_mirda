@@ -3,6 +3,14 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { FormUserCard } from './FormUserCard'
 
+/**
+ * Renders a list of form items based on the provided 'part' prop.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.part - The part object containing the list of items.
+ * @returns {JSX.Element} The rendered form items.
+ */
 export const FormItems = ({part}) => {
     const items = part?.items || []
     return (

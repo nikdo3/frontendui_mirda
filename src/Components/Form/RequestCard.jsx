@@ -3,6 +3,14 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+/**
+ * Renders a card component for displaying request information.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.request - The request object containing request information.
+ * @returns {JSX.Element} The rendered card component.
+ */
 export const RequestCard = ({request}) => {
     return (
         <div>

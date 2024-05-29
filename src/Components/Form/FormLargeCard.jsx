@@ -8,6 +8,16 @@ import { FormSections } from './FormSections'
 // import { FormMediumCard } from './FormMediumCard'
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
+/**
+ * Renders a large card component for a form.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.form - The form object.
+ * @param {string} props.uuid - The UUID of the form.
+ * @param {ReactNode} props.children - The child components.
+ * @returns {JSX.Element} The rendered large card component.
+ */
 export const FormLargeCard = ({form, uuid, children}) => {
     return (
         <CardCapsule title={<div>

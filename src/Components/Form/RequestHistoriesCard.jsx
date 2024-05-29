@@ -2,6 +2,16 @@ import { Dropdown } from "react-bootstrap";
 import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
+/**
+ * Renders a card component displaying the request histories.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.request - The request object.
+ * @param {ReactNode} props.children - The child components.
+ * @param {Object} props.table - The table object.
+ * @returns {JSX.Element} The rendered component.
+ */
 export const RequestHistoriesCard = ({ request,children, table}) => { // eslint-disable-line react/prop-types
   return (
     <div>

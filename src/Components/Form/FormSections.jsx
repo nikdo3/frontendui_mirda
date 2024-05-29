@@ -5,6 +5,14 @@ import { FormParts } from './FormParts'
 
 // stránka z form načte pole se sekcemi a pro každou sekci vytvoří CardCapsule ve kterém bude název sekce
 
+/**
+ * Renders the form sections.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.form - The form object.
+ * @returns {JSX.Element} The rendered component.
+ */
 export const FormSections = ({form}) => {
     const sections = form?.sections || []
     return (
