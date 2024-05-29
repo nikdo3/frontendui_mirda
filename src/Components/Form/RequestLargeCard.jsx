@@ -28,7 +28,7 @@ export const RequestLargeCard = ({request,children}) => {
         </Row>
         <br /> */}
         <Row>
-           <Col md = {3}> {/* basic info */}
+           <Col md = {4}> {/* basic info */}
                 {/* <RequestCard request={request}/> */}
                 <RequestCard request={request}/>
         
