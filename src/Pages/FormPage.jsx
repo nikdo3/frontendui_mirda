@@ -13,7 +13,7 @@ export const FormPage = ()  => {
 
     if (form) {
         return (
-            <FormLargeCard form={form} />
+            <FormLargeCard form={form} uuid={id} />
         )
     } else {
         return (

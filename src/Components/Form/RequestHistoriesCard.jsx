@@ -1,9 +1,6 @@
 import { Dropdown } from "react-bootstrap";
 import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
-
-
-
-
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
 export const RequestHistoriesCard = ({ request,children, table}) => { // eslint-disable-line react/prop-types
   return (
@@ -21,10 +18,10 @@ export const RequestHistoriesCard = ({ request,children, table}) => { // eslint-
           <tbody>
             {request?.histories?.map((requesty, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{request?.created}</td>
-                <td>{"c"}</td>
-                <td>{"d"}</td>
+                <td><ProxyLink to={"/form/view/" + requesty.form?.id}>{index + 1}</ProxyLink></td>
+                <td>{requesty.created}</td>
+                <td>{requesty.changedby?.fullname}</td>
+                <td>{}</td>
               </tr>
             ))}
           </tbody>

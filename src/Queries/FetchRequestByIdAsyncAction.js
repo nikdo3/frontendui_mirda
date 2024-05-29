@@ -15,6 +15,10 @@ const query = `query ($id: UUID!) {
       form {
         id
       }
+      changedby {
+        id
+        fullname
+      }
     }
   }
 }`

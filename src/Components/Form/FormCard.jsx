@@ -5,12 +5,12 @@ import Col from 'react-bootstrap/Col'
 import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
 
 
-export const FormCard = ({form,children}) => {
+export const FormCard = ({form, uuid, children}) => {
     return (
         <div>
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/view/190d578c-afb1-11ed-9bd8-0242ac110002"}>Žádost</ProxyLink></span>
+            <span><ProxyLink to={"/form/view/" + uuid}>Žádost</ProxyLink></span>
 
         </div>}>
             

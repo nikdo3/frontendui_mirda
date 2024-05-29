@@ -8,11 +8,11 @@ import { FormSections } from './FormSections'
 // import { FormMediumCard } from './FormMediumCard'
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
-export const FormLargeCard = ({form, children}) => {
+export const FormLargeCard = ({form, uuid, children}) => {
     return (
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/view/190d578c-afb1-11ed-9bd8-0242ac110002"}>Žádost</ProxyLink></span>
+            <span><ProxyLink to={"/form/view/" + uuid}>Žádost</ProxyLink></span>
 
         </div>}>
         {/* <Row>
@@ -30,7 +30,7 @@ export const FormLargeCard = ({form, children}) => {
         <br /> */}
         <Row>
            <Col md = {3}> {/* basic info */}
-                <FormCard form={form}/>
+                <FormCard form={form} uuid={uuid}/>
             </Col>
 
             <Col md = {9}>{/* section */}

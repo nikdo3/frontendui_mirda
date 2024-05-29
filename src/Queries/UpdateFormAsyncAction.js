@@ -4,15 +4,9 @@ const mutation =
   result: formPartUpdate(part: {lastchange: $lastchange, name: $name, id: $id}) {
     result: part {
       id
-      created
       lastchange
       name
-      items {
-        value
-        id
-      }
     }
-    msg
   }
 }
 `
