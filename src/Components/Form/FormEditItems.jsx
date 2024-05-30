@@ -1,7 +1,8 @@
-import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
+import { CardCapsule, EditableAttributeText, EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { FormEditUserCard } from './FormEditUserCard'
+import { RawUpdateFormAsyncAction} from '../../Queries/UpdateFormAsyncAction'
 
 /**
  * Renders a list of form items based on the provided 'part' prop.
@@ -26,7 +27,7 @@ export const FormEditItems = ({part}) => {
                         <CardCapsule title={item.name} >
                             <Row>
                                 <Col>{item.name}:</Col>
-                                <Col>{item.value}</Col>
+                                <EditableAttributeText item={item.value} attributeName="value" label="Obsah" asyncUpdater={RawUpdateFormAsyncAction} />
                             </Row>
                         </CardCapsule>
                     )}

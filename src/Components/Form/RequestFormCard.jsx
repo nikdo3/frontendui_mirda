@@ -12,7 +12,7 @@ const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst Formu
  * @param {string} props.Forid - The ID of the form.
  * @returns {JSX.Element} The rendered form card.
  */
-export const RequestFormCard = ({ Forid }) => {
+export const RequestFormCard = ({ Forid, request }) => {
     const Formid = Forid
     const [onResolve, onReject] = validator(useDispatch())
     const [form, formPromise] = useFreshItem({id: Formid}, FetchFormByIdAsyncAction) // Add the required variable "id" with the value of "Formid"
@@ -20,7 +20,7 @@ export const RequestFormCard = ({ Forid }) => {
 
     if (form) {
         return (
-            <FormSections form={form} />
+            <FormSections form={form}  typ={"request"} action={"view"} uuid={request.id}/>
         )
     } else {
         return (

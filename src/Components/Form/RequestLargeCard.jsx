@@ -36,7 +36,7 @@ export const RequestLargeCard = ({request,children}) => {
             </Col>
 
             <Col md = {8}>{/* form */}
-                <RequestFormCard Forid={sortedHistories[sortedHistories.length - 1].form?.id}></RequestFormCard>
+                <RequestFormCard Forid={sortedHistories[sortedHistories.length - 1].form?.id} request={request}></RequestFormCard>
             </Col>
         </Row>
         <br />

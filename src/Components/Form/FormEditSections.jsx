@@ -2,6 +2,7 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { FormEditParts } from './FormEditParts'
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
 // stránka z form načte pole se sekcemi a pro každou sekci vytvoří CardCapsule ve kterém bude název sekce
 
@@ -13,10 +14,13 @@ import { FormEditParts } from './FormEditParts'
  * @param {Object} props.form - The form object.
  * @returns {JSX.Element} The rendered component.
  */
-export const FormEditSections = ({form}) => {
+export const FormEditSections = ({form, typ, action, uuid}) => {
     const sections = form?.sections || []
     return (
-        <CardCapsule title={"Formulář " + form?.name}>
+        <CardCapsule title={<div>
+            <span>Formulář </span>
+            <span><ProxyLink to={"/" + typ + "/" + action + "/" + uuid}>{form?.name}</ProxyLink></span>
+            </div>}>
             {sections.map((section, index) => (
                 <Row>
                     <Col key={section.id} md={12}>

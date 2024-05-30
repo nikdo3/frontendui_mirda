@@ -44,7 +44,7 @@ export const FormLargeCard = ({form, uuid, children}) => {
             </Col>
 
             <Col md = {9}>{/* section */}
-                <FormSections form={form}/>
+                <FormSections form={form} typ={"form"} action={"view"} uuid={form.id}/>
             </Col>
         </Row>
             <Col>{/* raw */}
