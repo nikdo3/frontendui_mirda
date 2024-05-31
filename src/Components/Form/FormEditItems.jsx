@@ -3,6 +3,15 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { FormEditUserCard } from './FormEditUserCard'
 import { RawUpdateFormAsyncAction} from '../../Queries/UpdateFormAsyncAction'
+import { FetchFormByIdAsyncAction } from '../../Queries/FetchFormByIdAsyncAction'
+
+
+
+const UpdateAndReloadForm = (form) => (formitem) => async (dispatch) => {
+    const result = await dispatch(RawUpdateFormAsyncAction(formitem))
+    const formdata = await dispatch(FetchFormByIdAsyncAction(form))
+    return result
+}
 
 /**
  * Renders a list of form items based on the provided 'part' prop.
@@ -12,7 +21,7 @@ import { RawUpdateFormAsyncAction} from '../../Queries/UpdateFormAsyncAction'
  * @param {Object} props.part - The part object containing the list of items.
  * @returns {JSX.Element} The rendered form items.
  */
-export const FormEditItems = ({part}) => {
+export const FormEditItems = ({part, form}) => {
     const items = part?.items || []
     return (
         <Row>
@@ -27,7 +36,7 @@ export const FormEditItems = ({part}) => {
                         <CardCapsule title={item.name} >
                             <Row>
                                 <Col>{item.name}:</Col>
-                                <EditableAttributeText item={item.value} attributeName="value" label="Obsah" asyncUpdater={RawUpdateFormAsyncAction} />
+                                <EditableAttributeText item={item} attributeName="value" label="Obsah" asyncUpdater={UpdateAndReloadForm(form)} />
                             </Row>
                         </CardCapsule>
                     )}

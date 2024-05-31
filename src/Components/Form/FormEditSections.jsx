@@ -24,7 +24,7 @@ export const FormEditSections = ({form, typ, action, uuid}) => {
             {sections.map((section, index) => (
                 <Row key={section.id}>
                     <Col  md={12}>
-                        <FormEditParts section={section}/>
+                        <FormEditParts section={section} form={form}/>
                     </Col>
                 </Row>
             ))}

@@ -23,6 +23,7 @@ const query = `query ($id: UUID!) {
           value
           name
           id
+          lastchange
           type {
             name
             id
