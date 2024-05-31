@@ -22,8 +22,8 @@ export const FormEditSections = ({form, typ, action, uuid}) => {
             <span><ProxyLink to={"/" + typ + "/" + action + "/" + uuid}>{form?.name}</ProxyLink></span>
             </div>}>
             {sections.map((section, index) => (
-                <Row>
-                    <Col key={section.id} md={12}>
+                <Row key={section.id}>
+                    <Col  md={12}>
                         <FormEditParts section={section}/>
                     </Col>
                 </Row>
