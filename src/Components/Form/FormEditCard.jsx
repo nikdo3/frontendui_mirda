@@ -32,14 +32,7 @@ export const FormEditCard = ({form, uuid, children}) => {
                 <Col>Poslední změna:</Col>
                 <Col>{form?.lastchange}</Col>
             </Row>
-            <Row>
-                <Col>Sekce:</Col>
-                <Col>{form?.sections?.name}</Col>
-            </Row>
-            <Row>
-                <Col>Jméno části:</Col>
-                <Col>{form?.sections?.parts?.name}</Col>
-            </Row>
+            
             <Row>
                 <Col>Typ:</Col>
                 <Col>{form?.type?.name}</Col>
