@@ -26,11 +26,11 @@ export const FormCard = ({form, uuid, children}) => {
             
             <Row>
                 <Col>Patří k požadavku:</Col>
-                <ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení studia</ProxyLink>
+                <Col><ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení studia</ProxyLink></Col>
             </Row>
             <Row>
                 <Col>Poslední změna:</Col>
-                <Col>{form?.lastchange}</Col>
+                <Col>{form?.lastchange.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</Col>
             </Row>
            
             <Row>

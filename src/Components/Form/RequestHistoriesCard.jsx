@@ -29,7 +29,7 @@ export const RequestHistoriesCard = ({ request,children, table}) => { // eslint-
             {request?.histories?.map((requesty, index) => (
               <tr key={index}>
                 <td><ProxyLink to={"/form/view/" + requesty.form?.id}>{index + 1}</ProxyLink></td>
-                <td>{requesty.created.toLocaleString()}</td>
+                <td>{requesty.created.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</td>
                 <td>{requesty.changedby?.fullname}</td>
                 <td>{requesty.name}</td>
               </tr>
