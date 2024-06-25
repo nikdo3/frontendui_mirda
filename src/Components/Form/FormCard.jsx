@@ -30,7 +30,7 @@ export const FormCard = ({form, children}) => {
             </Row>
             <Row>
                 <Col>Poslední změna:</Col>
-                <Col>{form?.lastchange.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</Col>
+                <Col>{Date(form?.lastchange).toLocaleString()}</Col>
             </Row>
            
             <Row>
