@@ -14,7 +14,7 @@ import { FormEditItems } from './FormEditItems'
  * @param {Array} props.section.parts - The array of parts for the section.
  * @returns {JSX.Element} The rendered component.
  */
-export const FormEditParts = ({section, form}) => {
+export const SectionEditCard = ({section, form}) => {
     const parts = section?.parts || []
     return (
         <CardCapsule title={section.name}>

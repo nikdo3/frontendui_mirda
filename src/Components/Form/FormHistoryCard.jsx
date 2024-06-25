@@ -15,12 +15,12 @@ import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
  * @param {ReactNode} props.children - The child components.
  * @returns {JSX.Element} The form card component.
  */
-export const FormCard = ({form, children}) => {
+export const FormHistoryCard = ({form, children}) => {
     return (
         <div>
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/view/" + form.id}>Žádost</ProxyLink></span>
+            <span><ProxyLink to={"/form/edit/" + form.id}>Žádost</ProxyLink></span>
 
         </div>}>
             
@@ -30,9 +30,9 @@ export const FormCard = ({form, children}) => {
             </Row>
             <Row>
                 <Col>Poslední změna:</Col>
-                <Col>{form?.lastchange.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</Col>
+                <Col>{Date(form?.lastchange).toLocaleString()}</Col>
             </Row>
-           
+            
             <Row>
                 <Col>Typ:</Col>
                 <Col>{form?.type?.name}</Col>

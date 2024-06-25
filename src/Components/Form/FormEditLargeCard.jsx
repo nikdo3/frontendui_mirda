@@ -3,8 +3,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 // import { FormRolesCard } from './FormRolesCard'
 import { FormEditRawCard } from './FormEditRawCard'
+import { FormHistoryCard } from './FormHistoryCard'
 import { FormEditCard } from './FormEditCard'
-import { FormEditSections } from './FormEditSections'
 // import { FormMediumCard } from './FormMediumCard'
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
@@ -18,11 +18,11 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
  * @param {ReactNode} props.children - The child components.
  * @returns {JSX.Element} The rendered large card component.
  */
-export const FormEditLargeCard = ({form, uuid, children}) => {
+export const FormEditLargeCard = ({form, children}) => {
     return (
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/edit/" + uuid}>Žádost</ProxyLink></span>
+            <span><ProxyLink to={"/form/edit/" + form.id}>Žádost</ProxyLink></span>
 
         </div>}>
         {/* <Row>
@@ -40,17 +40,18 @@ export const FormEditLargeCard = ({form, uuid, children}) => {
         <br /> */}
         <Row>
            <Col md = {3}> {/* basic info */}
-                <FormEditCard form={form} uuid={uuid}/>
+                <FormHistoryCard form={form}/>
             </Col>
 
             <Col md = {9}>{/* section */}
-                <FormEditSections form={form} typ={"form"} action={"edit"} uuid={form.id}/>
+                <FormEditCard form={form} typ={"form"} action={"edit"}/>
             </Col>
         </Row>
+        <Row>
             <Col>{/* raw */}
                 <FormEditRawCard form={form}/>
             </Col>
-
+        </Row>
     </CardCapsule>
 
     )

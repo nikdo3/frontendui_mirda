@@ -18,11 +18,11 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
  * @param {ReactNode} props.children - The child components.
  * @returns {JSX.Element} The rendered large card component.
  */
-export const FormLargeCard = ({form, uuid, children}) => {
+export const FormLargeCard = ({form, children}) => {
     return (
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/view/" + uuid}>Žádost</ProxyLink></span>
+            <span><ProxyLink to={"/form/view/" + form.id}>Žádost</ProxyLink></span>
 
         </div>}>
         {/* <Row>
@@ -40,11 +40,11 @@ export const FormLargeCard = ({form, uuid, children}) => {
         <br /> */}
         <Row>
            <Col md = {3}> {/* basic info */}
-                <FormCard form={form} uuid={uuid}/>
+                <FormCard form={form}/>
             </Col>
 
             <Col md = {9}>{/* section */}
-                <FormSections form={form} typ={"form"} action={"view"} uuid={form.id}/>
+                <FormSections form={form} typ={"form"} action={"view"}/>
             </Col>
         </Row>
             <Col>{/* raw */}

@@ -19,7 +19,7 @@ export const FormSections = ({form, typ, action, uuid}) => {
     return (
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/" + typ + "/" + action + "/" + uuid}>{form?.name}</ProxyLink></span>
+            <span><ProxyLink to={"/" + typ + "/" + action + "/" + form.id}>{form?.name}</ProxyLink></span>
         </div>}>
             {sections.map((section, index) => (
                 <Row>

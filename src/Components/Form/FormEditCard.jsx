@@ -1,43 +1,35 @@
-/* eslint-disable react/prop-types */
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
+import { SectionEditCard } from './SectionEditCard'
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 
+// stránka z form načte pole se sekcemi a pro každou sekci vytvoří CardCapsule ve kterém bude název sekce
 
 /**
- * Renders a form card component.
+ * Renders the form sections.
  *
  * @component
  * @param {Object} props - The component props.
  * @param {Object} props.form - The form object.
- * @param {string} props.uuid - The UUID of the form.
- * @param {ReactNode} props.children - The child components.
- * @returns {JSX.Element} The form card component.
+ * @returns {JSX.Element} The rendered component.
  */
-export const FormEditCard = ({form, uuid, children}) => {
+export const FormEditCard = ({form, typ}) => {
+    const sections = form?.sections || []
     return (
-        <div>
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/edit/" + uuid}>Žádost</ProxyLink></span>
-
-        </div>}>
-            
-            <Row>
-                <Col>Patří k požadavku:</Col>
-                <Col><ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení studia</ProxyLink></Col>
-            </Row>
-            <Row>
-                <Col>Poslední změna:</Col>
-                <Col>{form?.lastchange.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</Col>
-            </Row>
-            
-            <Row>
-                <Col>Typ:</Col>
-                <Col>{form?.type?.name}</Col>
-            </Row>
+            <span><ProxyLink to={"/" + typ + "/edit/" + form.id}>{form?.name}</ProxyLink></span>
+            </div>}>
+            {sections.map((section, index) => (
+                <Row key={section.id}>
+                    <Col  md={12}>
+                        <SectionEditCard section={section} form={form}/>
+                    </Col>
+                </Row>
+            ))}
+        
         </CardCapsule>
-        </div>
     )
 }
+
