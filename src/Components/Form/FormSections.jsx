@@ -14,7 +14,7 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
  * @param {Object} props.form - The form object.
  * @returns {JSX.Element} The rendered component.
  */
-export const FormSections = ({form, typ, action, uuid}) => {
+export const FormSections = ({form, typ, action}) => {
     const sections = form?.sections || []
     return (
         <CardCapsule title={<div>

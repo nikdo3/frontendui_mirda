@@ -6,7 +6,7 @@ import { FormRawCard } from './FormRawCard'
 import { FormCard } from './FormCard'
 import { FormSections } from './FormSections'
 // import { FormMediumCard } from './FormMediumCard'
-import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
+import { FormLink } from './FormLink'
 
 /**
  * Renders a large card component for a form.
@@ -22,7 +22,7 @@ export const FormLargeCard = ({form, children}) => {
     return (
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/view/" + form.id}>Žádost</ProxyLink></span>
+            <span><FormLink form={form} text={"Žádost"}/></span>
 
         </div>}>
         {/* <Row>

@@ -20,7 +20,7 @@ export const RequestFormCard = ({ Forid, request }) => {
 
     if (form) {
         return (
-            <FormSections form={form}  typ={"request"} action={"view"} uuid={request.id}/>
+            <FormSections form={form} typ={"request"} action={"view"}/>
         )
     } else {
         return (

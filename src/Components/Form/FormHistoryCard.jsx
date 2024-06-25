@@ -2,7 +2,7 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
+import { FormLink } from './FormLink'
 
 
 /**
@@ -20,7 +20,7 @@ export const FormHistoryCard = ({form, children}) => {
         <div>
         <CardCapsule title={<div>
             <span>Formulář </span>
-            <span><ProxyLink to={"/form/edit/" + form.id}>Žádost</ProxyLink></span>
+            <span><FormLink form={form} text={"Žádost"}/></span>
 
         </div>}>
             
