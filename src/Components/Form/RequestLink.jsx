@@ -1,7 +1,7 @@
 import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
 
-export const RequestLink = ({request, text}) => {
+export const RequestLink = ({uuid, text}) => {
     return (
-        <ProxyLink to={"/request/view/" + request.id}>{text}</ProxyLink>
+        <ProxyLink to={"/request/view/" + uuid}>{text}</ProxyLink>
     )
 }

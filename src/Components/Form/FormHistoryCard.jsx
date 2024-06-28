@@ -26,7 +26,7 @@ export const FormHistoryCard = ({form, children}) => {
             
             <Row>
                 <Col>Patří k požadavku:</Col>
-                <Col><ProxyLink to={"/request/view/13181566-afb0-11ed-9bd8-0242ac110002"}>Žádost o přerušení studia</ProxyLink></Col>
+                <Col><RequestLink uuid={"13181566-afb0-11ed-9bd8-0242ac110002"} text={"Žádost o přerušení studia"} /></Col>
             </Row>
             <Row>
                 <Col>Poslední změna:</Col>

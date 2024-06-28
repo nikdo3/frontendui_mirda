@@ -19,9 +19,11 @@ export const FormParts = ({section}) => {
     return (
         <CardCapsule title={section.name}>
             <Row>
+                <Col>
                 {parts.map((part) => (
                         <FormItems key={part.id} part={part}/>
                 ))}
+                </Col>
             </Row>
         </CardCapsule>
     )
