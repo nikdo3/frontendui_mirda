@@ -26,11 +26,11 @@ export const RequestCard = ({request}) => {
             </Row>
             <Row>
                 <Col>Vytvořeno</Col>
-                <Col>{request?.created.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</Col>
+                <Col>{Date(request?.created).toLocaleString()}</Col>
             </Row>
             <Row>
                 <Col>Naposledy změněno</Col>
-                <Col>{request?.lastchange.replace(/\.[0-9]+$/, '').replace(/[T]/, ' ')}</Col>
+                <Col>{Date(request?.lastchange).toLocaleString()}</Col>
             </Row>
         </CardCapsule>
         </div>

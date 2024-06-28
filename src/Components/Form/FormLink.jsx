@@ -1,7 +1,7 @@
 import {ProxyLink} from '@hrbolek/uoisfrontend-shared/src'
 
-export const FormLink = ({form, text}) => {
+export const FormLink = ({form, action, text}) => {
     return (
-        <ProxyLink to={"/form/view/" + form.id}>{text}</ProxyLink>
+        <ProxyLink to={"/form/" + action + "/" + form.id}>{text}</ProxyLink>
     )
 }
