@@ -35,3 +35,8 @@
 - 17.6. píšeme panu štefkovi ohledně toho, že nevíme co opravit
 	- update dockeru na mírově počítači
 		- (přestal fungovat)
+- 25.6. provedeny úpravy podle mailu z 24.6. - implementování pages, oddělení linků (již jsou samostatně),
+  	 úprava formátu data, upravení jmen komponent, doplnění Cols a Rows, proveden purge
+- 28.6. oprava jména package, spuštění nové verze dockeru (docker padá)
+- 1.7. oprava dockeru - pomoc pana Štefka (smazání kontejneru gql events a opětovný compose)
+
